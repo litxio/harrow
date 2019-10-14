@@ -1,0 +1,80 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.31.2.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 88de854f8084755b9f8dc33c45543d8956149bd92179a4bcd719fb95d9070da3
+
+name:           harrow
+version:        0.1.0.0
+description:    Please see the README on GitHub at <https://github.com/githubuser/harrow#readme>
+homepage:       https://github.com/githubuser/harrow#readme
+bug-reports:    https://github.com/githubuser/harrow/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2019 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+extra-source-files:
+    README.md
+    ChangeLog.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/harrow
+
+library
+  exposed-modules:
+      Data.Apache.Arrow
+      Data.Apache.Arrow.Array
+      Data.Apache.Arrow.Builder
+      Data.Apache.Arrow.Conversion
+      Data.Apache.Arrow.Instances
+      Data.Apache.Arrow.Show
+      Data.Apache.Arrow.Table
+      Data.Apache.Arrow.TH
+      Data.Apache.Arrow.Types
+  other-modules:
+      Paths_harrow
+  hs-source-dirs:
+      src
+  default-extensions: OverloadedStrings DataKinds TypeFamilies TypeApplications GeneralizedNewtypeDeriving FlexibleContexts RecordWildCards
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , gi-arrow
+    , gi-glib
+    , haskell-gi
+    , haskell-gi-base
+    , random
+    , template-haskell
+    , text
+    , transformers
+    , vector
+  default-language: Haskell2010
+
+test-suite harrow-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Paths_harrow
+  hs-source-dirs:
+      test
+  default-extensions: OverloadedStrings DataKinds TypeFamilies TypeApplications GeneralizedNewtypeDeriving FlexibleContexts RecordWildCards
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , bytestring
+    , gi-arrow
+    , gi-glib
+    , harrow
+    , haskell-gi
+    , haskell-gi-base
+    , random
+    , template-haskell
+    , text
+    , transformers
+    , vector
+  default-language: Haskell2010
